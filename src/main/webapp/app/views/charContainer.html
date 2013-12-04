@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-12">
+        <form class="form-inline">
+            <label for="char-search">Search by ID or Name</label>
+            <div class="form-group">
+                <input id="char-search" class="form-control" data-bind="value: query"/>
+            </div>
+            <button class="btn btn-primary" type="submit" data-bind="click: search">Search</button>
+        </form>
+    </div>
+</div>
+<div class="row top-spaced">
+    <div class="col-md-2">
+        <ul class="listbox" data-bind="foreach: openChars">
+            <li data-bind="click: $parent.activeChar">
+                <span data-bind="text: id"></span>
+                <span data-bind="text: name"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-10" data-bind="compose: activeChar"></div>
+</div>

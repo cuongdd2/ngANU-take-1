@@ -27,32 +27,24 @@ public class Startup extends HttpServlet
         super.destroy();
     }
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-    {}
-
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-    {}
-
     public void init()
             throws ServletException
     {
-        Conf conf = Conf.GetInstance("/etc/iweb.conf", null);
+        //Conf conf = Conf.GetInstance("/etc/iweb.conf", null);
         Octets.setDefaultCharset("UTF-16LE");
-        GMServiceImpl gmi = new GMServiceImpl();
-//        try
-//        {
-//            Class.forName("protocol.DeliveryDB");
-//            Runtime.getRuntime().exec("/bin/mkdir -p /var/spool/moverole/incoming");
-//            Runtime.getRuntime().exec("/bin/mkdir -p /var/spool/moverole/outcoming");
-//            Runtime.getRuntime().exec("/bin/mkdir -p /var/spool/rolexml/incoming");
-//            Runtime.getRuntime().exec("/bin/mkdir -p /var/spool/rolexml/outcoming");
-//        }
-//        catch (Exception ex)
-//        {
-//            ex.printStackTrace();
-//        }
+        //GMServiceImpl gmi = new GMServiceImpl();
+        try
+        {
+            Class.forName("protocol.DeliveryDB");
+            Runtime.getRuntime().exec("/bin/mkdir -p /var/spool/moverole/incoming");
+            Runtime.getRuntime().exec("/bin/mkdir -p /var/spool/moverole/outcoming");
+            Runtime.getRuntime().exec("/bin/mkdir -p /var/spool/rolexml/incoming");
+            Runtime.getRuntime().exec("/bin/mkdir -p /var/spool/rolexml/outcoming");
+        }
+        catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
 //        try
 //        {
 //            boolean pidon = conf.find("iweb", "pidon").equals("true");
