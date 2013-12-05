@@ -1,7 +1,5 @@
-/*html, body, .durandal-wrapper
-.max-height {
-  height: 100%;
-}*/
+@import 'var';
+
 .container {
   position: absolute;
   top: 10px;
@@ -15,18 +13,27 @@
 .max-height {
   height: 100%;
 }
-ul.listbox {
-  border: 1px solid #dddddd;
-  list-style-type: none;
-  padding: 5px;
-  height: 100%;
+#panel-char-list {
+  @include panel-default;
+  overflow-y: auto;
+  ul {
+    list-style-type: none;
+    padding: 5px;
 
-  li {
-    padding: 4px;
+    li {
+      padding: 4px;
+    }
+    li:hover {
+      cursor: pointer;
+      color: white;
+      background: #3a87ad;
+    }
   }
-  li:hover {
-    cursor: pointer;
-    color: white;
-    background: #3a87ad;
+}
+#panel-char-editor {
+  @include panel-default;
+
+  .row {
+    margin: 15px 0 0;
   }
 }

@@ -1,22 +1,27 @@
 <div class="row">
-    <div class="col-md-12">
-        <form class="form-inline">
-            <label for="char-search">Search by ID or Name</label>
-            <div class="form-group">
-                <input id="char-search" class="form-control" data-bind="value: query"/>
-            </div>
-            <button class="btn btn-primary" type="submit" data-bind="click: search">Search</button>
+    <div class="col-md-4 col-md-offset-4">
+        <form id="panel-char-search">
+            <span class="input-group">
+                <input placeholder="ID or Name" class="form-control" data-bind="value: query"/>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" data-bind="click: search">Search</button>
+                </span>
+            </span>
         </form>
     </div>
 </div>
-<div class="row top-spaced">
-    <div class="col-md-2">
-        <ul class="listbox" data-bind="foreach: openChars">
-            <li data-bind="click: $parent.activeChar">
-                <span data-bind="text: id"></span>
-                <span data-bind="text: name"></span>
-            </li>
-        </ul>
+<div class="row top-spaced" id="panel-char-container">
+    <div class="col-md-3 max-height">
+        <div id="panel-char-list">
+            <ul data-bind="foreach: openChars">
+                <li data-bind="click: $parent.activeChar">
+                    <span data-bind="text: id">0000</span>
+                    <span data-bind="text: name">Char Name</span>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="col-md-10" data-bind="compose: activeChar"></div>
+    <div class="col-md-9 max-height">
+        <div id="panel-char-editor" data-bind="compose: activeChar"></div>
+    </div>
 </div>

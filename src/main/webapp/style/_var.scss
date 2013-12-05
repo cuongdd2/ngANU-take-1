@@ -1,0 +1,11 @@
+$border-color-1: #dddddd;
+
+@mixin bordered($color) {
+  border: 1px solid $color;
+}
+
+@mixin panel-default {
+  @include bordered($border-color-1);
+  height: 100%;
+  overflow: auto;
+}

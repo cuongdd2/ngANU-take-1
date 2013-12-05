@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-responsive.css" />
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css" />
-    <link rel="stylesheet" href="style/ie10mobile.css" />
     <link rel="stylesheet" href="lib/durandal/css/durandal.css" />
 
     <link rel="stylesheet" href="style/app.css"/>
@@ -18,24 +17,95 @@
             <div class="container container-fluid">
                 <div class="durandal-wrapper max-height">
                     <div class="row">
-                        <div class="col-md-12">
-                            pow
+                        <div class="col-md-4 col-md-offset-4">
+                            <form>
+                                <span class="input-group">
+                                    <input placeholder="ID or Name" class="form-control" data-bind="value: query"/>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit" data-bind="click: search">Search</button>
+                                    </span>
+                                </span>
+                            </form>
                         </div>
                     </div>
-                    <div class="row top-spaced max-height">
-                        <div class="col-md-2 max-height">
-                            <ul class="listbox">
-                                <li>Item 01</li>
-                                <li>Item 02</li>
-                                <li>Item 03</li>
-                                <li>Item 04</li>
-                            </ul>
+                    <div class="row top-spaced" id="panel-char-container">
+                        <div class="col-md-3 max-height">
+                            <div id="panel-char-list">
+                                <ul data-bind="foreach: openChars">
+                                    <li data-bind="click: $parent.activeChar">
+                                        <span data-bind="text: id">0000</span>
+                                        <span data-bind="text: name">CharName</span>
+                                    </li>
+                                    <li data-bind="click: $parent.activeChar">
+                                        <span data-bind="text: id">0000</span>
+                                        <span data-bind="text: name">CharName</span>
+                                    </li>
+                                    <li data-bind="click: $parent.activeChar">
+                                        <span data-bind="text: id">0000</span>
+                                        <span data-bind="text: name">CharName</span>
+                                    </li>
+                                    <li data-bind="click: $parent.activeChar">
+                                        <span data-bind="text: id">0000</span>
+                                        <span data-bind="text: name">CharName</span>
+                                    </li>
+                                    <li data-bind="click: $parent.activeChar">
+                                        <span data-bind="text: id">0000</span>
+                                        <span data-bind="text: name">CharName</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="col-md-10"></div>
+                        <div class="col-md-9 max-height">
+                            <div id="panel-char-editor" data-bind="compose: activeChar">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <table class="table table-bordered table-condensed">
+                                            <tr>
+                                                <th>ID</th>
+                                                <td data-bind="text: id">0000</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Name</th>
+                                                <td data-bind="text: name">CharName</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Level</th>
+                                                <td data-bind="text: level">000</td>
+                                            </tr>
+                                            <tr>
+                                                <th>HP</th>
+                                                <td data-bind="text: hp">00000</td>
+                                            </tr>
+                                            <tr>
+                                                <th>MP</th>
+                                                <td data-bind="text: mp">00000</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Exp</th>
+                                                <td>
+                                                    <input type="text" data-bind="value: exp" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th></th>
+                                                <td data-bind="text: "></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        var el = document.getElementById('panel-char-container'),
+                size = el.getBoundingClientRect(),
+                height = window.innerHeight - size.top - 20;
+
+        el.style.height = height + 'px';
+    </script>
 </body>
 </html>
