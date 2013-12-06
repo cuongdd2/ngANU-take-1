@@ -13,6 +13,10 @@
 .max-height {
   height: 100%;
 }
+
+.fa-female { color: #c7254e; }
+.fa-male { color: #269abc; }
+
 #panel-char-list {
   @include panel-default;
   overflow-y: auto;

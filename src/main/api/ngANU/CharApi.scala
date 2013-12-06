@@ -4,26 +4,26 @@ import javax.ws.rs._
 import javax.ws.rs.core.{MediaType, Response}
 import javax.ws.rs.core.Response.Status
 
-import protocol.{GameDB, XmlRole}
+import protocol.GameDB
 
 @Path("char")
 class CharApi {
 
   @GET
   @Path("/{id : (\\d*)}")
-  @Produces(Array(MediaType.APPLICATION_XML))
-  def getById(@PathParam("id") idParam:Int):String = {
-    val role = Option(XmlRole.getRoleFromDB(idParam))
+  @Produces(Array(MediaType.APPLICATION_JSON))
+  def getById(@PathParam("id") idParam:Int):model.CharBean = {
+    val role = Option(GameDB.get(idParam))
     role match {
-      case Some(char) => new String(XmlRole.toXMLByteArray(char), "UTF-8")
+      case Some(char) => model.CharBean.map(char)
       case None => notFound
     }
   }
 
   @GET
   @Path("/{name}")
-  @Produces(Array(MediaType.APPLICATION_XML))
-  def getByName(@PathParam("name") nameParam:String):String = {
+  @Produces(Array(MediaType.APPLICATION_JSON))
+  def getByName(@PathParam("name") nameParam:String):model.CharBean = {
     val id = Option(GameDB.getRoleIdByName(nameParam))
     id match {
       case Some(id) => getById(id)

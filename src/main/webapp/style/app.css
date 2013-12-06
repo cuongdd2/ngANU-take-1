@@ -11,6 +11,12 @@
 .max-height {
   height: 100%; }
 
+.fa-female {
+  color: #c7254e; }
+
+.fa-male {
+  color: #269abc; }
+
 #panel-char-list {
   border: 1px solid #dddddd;
   height: 100%;

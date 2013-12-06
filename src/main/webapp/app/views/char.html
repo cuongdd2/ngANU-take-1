@@ -1,35 +1,49 @@
 <div class="row">
     <div class="col-md-4">
         <table class="table table-bordered table-condensed">
-        	<tr>
-        		<th>ID</th>
-        		<td data-bind="text: id"></td>
-        	</tr>
-        	<tr>
-        		<th>Name</th>
-        		<td data-bind="text: name"></td>
-        	</tr>
-        	<tr>
-        		<th>Level</th>
-        		<td data-bind="text: level"></td>
-        	</tr>
+            <tr>
+                <td colspan="2">
+                    [<span data-bind="text: base.id"></span>]
+                    <i class="fa" data-bind="css: getGenderFAClass()"></i>
+                    <strong data-bind="text: base.name"></strong>
+                    <img data-bind="attr: { src: 'img/clsicon/' + window.lib.char.classes[base.cls] + '.png' }" />
+                    <span data-bind="text: window.lib.char.classes[base.cls]"></span>
+                    Lv<span data-bind="text: status.level"></span>
+                </td>
+            </tr>
+            <tr>
+                <th>Cultivation</th>
+                <td>
+                    <select data-bind="options: window.lib.char.cultivations, value: status.level2"></select>
+                </td>
+            </tr>
         	<tr>
         		<th>HP</th>
-        		<td data-bind="text: hp"></td>
-        	</tr>
-        	<tr>
-        		<th>MP</th>
-        		<td data-bind="text: mp"></td>
-        	</tr>
-        	<tr>
-        		<th>Exp</th>
         		<td>
-        			<input type="text" data-bind="value: exp" />
+                    <span data-bind="text: status.hp"></span>
+                    /
+                    <span data-bind="text: ep.max_hp"></span>
         		</td>
         	</tr>
         	<tr>
-        		<th></th>
-        		<td data-bind="text: "></td>
+        		<th>MP</th>
+        		<td>
+                    <span data-bind="text: status.mp"></span>
+                    /
+                    <span data-bind="text: ep.max_mp"></span>
+        		</td>
+        	</tr>
+            <tr>
+                <th>Vigor</th>
+                <td>
+                    <select data-bind="options: [0,99,199,299,399], value: ep.max_ap"></select>
+                </td>
+            </tr>
+        	<tr>
+        		<th>Exp</th>
+        		<td>
+        			<input type="text" data-bind="value: status.exp" />
+        		</td>
         	</tr>
         </table>
     </div>

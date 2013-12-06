@@ -15,8 +15,8 @@
         <div id="panel-char-list">
             <ul data-bind="foreach: openChars">
                 <li data-bind="click: $parent.activeChar">
-                    <span data-bind="text: id">0000</span>
-                    <span data-bind="text: name">Char Name</span>
+                    <span data-bind="text: base.id"></span>
+                    <span data-bind="text: base.name"></span>
                 </li>
             </ul>
         </div>

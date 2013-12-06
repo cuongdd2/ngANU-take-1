@@ -96,7 +96,31 @@ public class CharBean {
     public Status status;
 
     public static class ExtendedProperties {
-
+        public int vitality;
+        public int energy;
+        public int strength;
+        public int agility;
+        public int max_hp;
+        public int max_mp;
+        public int hp_gen;
+        public int mp_gen;
+        public int walk_speed;
+        public int run_speed;
+        public int swim_speed;
+        public int flight_speed;
+        public int attack;
+        public int damage_low;
+        public int damage_high;
+        public int attack_speed;
+        public int attack_range;
+        public int[] addon_damage_low;
+        public int[] addon_damage_high;
+        public int damage_magic_low;
+        public int damage_magic_high;
+        public int[] resistance;
+        public int defense;
+        public int armor;
+        public int max_ap;
     }
     public ExtendedProperties ep;
 
@@ -115,12 +139,24 @@ public class CharBean {
     public Inventory[] equipment;
 
     public static class Pocket {
-
+        public int capacity;
+        public int timestamp;
+        public int money;
+        public Inventory[] items;
+        public int reserved1;
+        public int reserved2;
     }
     public Pocket pocket;
 
     public static class Storehouse {
-
+        public int capacity;
+        public int money;
+        public Inventory[] items;
+        public byte size1;
+        public byte size2;
+        public Inventory[] dress;
+        public Inventory[] material;
+        public int reserved;
     }
     public Storehouse storehouse;
 

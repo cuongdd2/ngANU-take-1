@@ -42,8 +42,8 @@ define(['knockout', 'jquery', 'durandal/app', 'viewmodels/char'], function(ko, $
                     'Not Found'
                 )
             })
-            .done(function(xmlRole) {
-                var c = new Char(xmlRole);
+            .done(function(charBean) {
+                var c = new Char(charBean);
                 context.openChars.push(c);
                 context.activeChar(c);
             })
