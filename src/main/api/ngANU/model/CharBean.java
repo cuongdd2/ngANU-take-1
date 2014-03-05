@@ -4,7 +4,9 @@ package ngANU.model;
 
     protocol.RoleBean is not really a Bean, it's constructed with plenty of
     functional and behavioral methods as well as non static inner classes.
-    This class is a proper java Bean mapped from RoleBean. Note that this
+    Thus cannot be serialized using convention, only using internal procedures.
+    It also does not support serializing extended_properties (ep) property.
+    This class is (almost) a proper java Bean mapped from RoleBean. Note that this
     class is not perfect representation, most fields/properties are not mapped
     and some are commented out due to being unused/unimportant
  */

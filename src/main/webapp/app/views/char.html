@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-5">
         <table class="table table-bordered table-condensed">
             <tr>
                 <td colspan="2">
@@ -45,6 +45,43 @@
         			<input type="text" data-bind="value: status.exp" />
         		</td>
         	</tr>
+            <tr>
+                <th>Spirit</th>
+                <td>
+                    <input type="text" data-bind="value: status.sp" />
+                </td>
+            </tr>
+            <tr>
+                <th>Stats</th>
+                <td>
+                    <div>
+                        CON
+                        <span data-bind="text: ep.vitality"></span>
+                        STR
+                        <span data-bind="text: ep.strength"></span>
+                    </div>
+                    <div>
+                        AGI
+                        <span data-bind="text: ep.agility"></span>
+                        INT
+                        <span data-bind="text: ep.energy"></span>
+                    </div>
+                    <div>
+                        Available Points:
+                        <span data-bind="text: status.pp"></span>
+                    </div>
+                </td>
+            </tr>
         </table>
+    </div>
+    <div class="col-md-7">
+        <ul data-bind="foreach: getInventories()">
+            <li>
+                <span data-bind="text: $index"></span>
+                <!-- ko if: $data -->
+                <strong data-bind="text: $data.id"></strong>
+                <!-- /ko -->
+            </li>
+        </ul>
     </div>
 </div>
