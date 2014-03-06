@@ -1,0 +1,5 @@
+.panel-default {
+  border: 1px solid #dddddd;
+  height: 100%;
+  overflow: auto;
+}

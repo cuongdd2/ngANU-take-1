@@ -1,40 +1,50 @@
+.panel-default {
+  border: 1px solid #dddddd;
+  height: 100%;
+  overflow: auto;
+}
 .container {
   position: absolute;
   top: 10px;
   left: 10px;
   right: 10px;
-  bottom: 10px; }
-
+  bottom: 10px;
+}
 .top-spaced {
-  margin-top: 10px; }
-
+  margin-top: 10px;
+}
 .max-height {
-  height: 100%; }
-
+  height: 100%;
+}
 .fa-female {
-  color: #c7254e; }
-
+  color: #c7254e;
+}
 .fa-male {
-  color: #269abc; }
-
+  color: #269abc;
+}
 #panel-char-list {
   border: 1px solid #dddddd;
   height: 100%;
   overflow: auto;
-  overflow-y: auto; }
-  #panel-char-list ul {
-    list-style-type: none;
-    padding: 5px; }
-    #panel-char-list ul li {
-      padding: 4px; }
-    #panel-char-list ul li:hover {
-      cursor: pointer;
-      color: white;
-      background: #3a87ad; }
-
+  overflow-y: auto;
+}
+#panel-char-list ul {
+  list-style-type: none;
+  padding: 5px;
+}
+#panel-char-list ul li {
+  padding: 4px;
+}
+#panel-char-list ul li:hover {
+  cursor: pointer;
+  color: white;
+  background: #3a87ad;
+}
 #panel-char-editor {
   border: 1px solid #dddddd;
   height: 100%;
-  overflow: auto; }
-  #panel-char-editor .row {
-    margin: 15px 0 0; }
+  overflow: auto;
+}
+#panel-char-editor .row {
+  margin: 15px 0 0;
+}
