@@ -4,14 +4,14 @@ window.lib =
       "gs01": "Perfect World"
       "is01": "City of Abominations"
       "is02": "Secret Passage"
-      #"is03": "Unknown"
-      #"is04": "Unknown"
-      #"is05": "Firecrag Grotto"
-      #"is06": "Den of Rabid Wolves"
-      #"is07": "Cave of the Vicious"
-      #"is08": "Hall of Deception"
-      #"is09": "Gate of Delirium"
-      #"is10": "Secret Frostcover Grounds"
+      "is03": "Unknown"
+      "is04": "Unknown"
+      "is05": "Firecrag Grotto"
+      "is06": "Den of Rabid Wolves"
+      "is07": "Cave of the Vicious"
+      "is08": "Hall of Deception"
+      "is09": "Gate of Delirium"
+      "is10": "Secret Frostcover Grounds"
       "is11": "Valley of Disaster"
       "is12": "Forest Ruins"
       "is13": "Cave of Sadistic Glee"
@@ -44,8 +44,8 @@ window.lib =
       "is41": "Endless Universe Super Mode"
       "is43": "Black ice Castle"
       "is44": "Skenario Pengujian1"
-      #"is45": "Skenario Pengujian2"
-      #"is46": "Skenario Pengujian3"
+      "is45": "Skenario Pengujian2"
+      "is46": "Skenario Pengujian3"
       "is50": "Realm Of Reflection"
       "arena01": "Atrium of Blood"
       "arena02": "Lost City Arena"
@@ -58,8 +58,9 @@ window.lib =
       "bg05": "Territory War T-1 PvP"
       "bg06": "Territory War T-1 PvE"
       "is75": "Leveling Island"
+
   char:
-    classes:
+    classes: [
       'Warrior'
       'Mage'
       'Psychic'
@@ -70,20 +71,21 @@ window.lib =
       'Priest'
       'Seeker'
       'Mystic'
-
-    cultivations:
+    ]
+    cultivations: [
       'Inchoation - Lv1'
-        'Autoscopy - Lv9'
-        'Transform - Lv19'
-        'Naissance - Lv29'
-        'Reborn - Lv39'
-        'Vigilance - Lv49'
-        'Doom - Lv59'
-        'Disengage - Lv69'
-        'Nirvana - Lv79'
-        '[Holy]Prime Immortal - Lv89'
-        '[Dark]Daimon Baersark - Lv89'
-        '[Holy]Pure Immortal - Lv99'
-        '[Dark]Daimon Saint - Lv99'
-        '[Holy]Ether Immortal - Lv109'
-        '[Dark]Daimon Elder - Lv109'
+      'Autoscopy - Lv9'
+      'Transform - Lv19'
+      'Naissance - Lv29'
+      'Reborn - Lv39'
+      'Vigilance - Lv49'
+      'Doom - Lv59'
+      'Disengage - Lv69'
+      'Nirvana - Lv79'
+      '[Holy]Prime Immortal - Lv89'
+      '[Dark]Daimon Baersark - Lv89'
+      '[Holy]Pure Immortal - Lv99'
+      '[Dark]Daimon Saint - Lv99'
+      '[Holy]Ether Immortal - Lv109'
+      '[Dark]Daimon Elder - Lv109'
+    ]
